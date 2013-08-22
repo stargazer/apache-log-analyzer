@@ -20,7 +20,7 @@ They are typically pre-installed in any Linux distribution.
 
 ### Run 
 
-	./analuzer [OPTION] LOGFILE
+	./analyzer [OPTION] LOGFILE
 
 ## Options
 * -i defines input size (number of lines to analyze)
