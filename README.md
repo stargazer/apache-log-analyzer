@@ -32,11 +32,11 @@ They are typically pre-installed in any Linux distribution.
 
 ## Examples
 
-### Out of the last 10000 requests, get the top 100 that generated the largest responses.
+##### Out of the last 10000 requests, get the top 100 that generated the largest responses.
 
 	./analyzer.sh -i 10000 -s dessize | head -n 100 > output.txt
 
-### Out of the last 100 requests, get the top 10 that generated the smallest responses
+##### Out of the last 100 requests, get the top 10 that generated the smallest responses
 
 	./analyzer.sh -i 10000 -s ascsize | head -n 10 > output.txt
 
