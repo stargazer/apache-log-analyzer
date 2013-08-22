@@ -7,6 +7,7 @@ Utility to analyze Apache's logs (Combined Log Format), and make some sense out 
 You need to have the following Linux utilities:
  * tail
  * awk
+ * sed
  * sort
  * head
 
