@@ -42,11 +42,16 @@ They are typically pre-installed in any Linux distribution.
 
 ##### Out of the last 10000 requests, get the top 100 that generated the largest responses.
 
-	./analyzer.sh -i 10000 -s dessize | head -n 100 > output.txt
+	./analyzer.sh -i 10000 -s descsize | head -n 100
 
 ##### Out of the last 100 requests, get the top 10 that generated the smallest responses
 
-	./analyzer.sh -i 10000 -s ascsize | head -n 10 > output.txt
+	./analyzer.sh -i 10000 -s ascsize | head -n 10
+
+#### Out of the last 1000 requests, get the top 10 slowest
+
+	./analyzer.sh -i 1000 -s desctime | head -n 10
+
 
 ## Notes
  * The output of analyzer, can be piped to any other shell utility.
