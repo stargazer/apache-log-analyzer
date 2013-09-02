@@ -35,10 +35,14 @@ sort=""
 if [ ! -z $svalue ] ; then
 	if [ "$svalue" == "ascsize" ] ; then
 		sort="sort -h -k4"
-	elif [ "$svalue" == "dessize" ] ; then
+	elif [ "$svalue" == "descsize" ] ; then
 		sort="sort -h -r -k4"
+	elif [ "$svalue" == "asctime" ] ; then
+		sort="sort -h -k5"
+	elif [ "$svalue" == "desctime" ] ; then
+		sort="sort -h -r -k5"
 	else
-		printf "Option -s expects either value of 'ascsize' or 'dessize'";
+		printf "Option -s expects either value of 'ascsize', 'dessize', 'asctime' or 'desctime'";
 		exit 1
 	fi
 fi
@@ -56,7 +60,7 @@ fi
 
 # * COMMAND CONSTRUCTION
 # Costruct the basic command
-command="tail -n $ivalue $logfile | awk {'print \$4, \$6, \$7, \$10'} | sed 's/\[//g' | sed 's/\"//g'"
+command="tail -n $ivalue $logfile | awk {'print \$4, \$6, \$7, \$10, \$11'} | sed 's/\[//g' | sed 's/\"//g'"
 
 # Has sorting been asked? If yes, we append it
 if [[ ! -z $sort ]]; then
