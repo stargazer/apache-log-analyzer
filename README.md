@@ -42,15 +42,15 @@ They are typically pre-installed in any Linux distribution.
 
 ##### Out of the last 10000 requests, get the top 100 that generated the largest responses.
 
-	./analyzer.sh -i 10000 -s descsize | head -n 100
+	./analyzer.sh -i 10000 -s descsize /var/log/apache/apache.log | head -n 100
 
 ##### Out of the last 100 requests, get the top 10 that generated the smallest responses
 
-	./analyzer.sh -i 10000 -s ascsize | head -n 10
+	./analyzer.sh -i 10000 -s ascsize /var/log/apache/apache.log | head -n 10
 
 #### Out of the last 1000 requests, get the top 10 slowest
 
-	./analyzer.sh -i 1000 -s desctime | head -n 10
+	./analyzer.sh -i 1000 -s desctime /var/log/apache/apache.log | head -n 10
 
 
 ## Notes
